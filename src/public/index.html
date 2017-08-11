@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no">
+
+    <link rel="stylesheet" href="css/font-awesome.min.css" />
+    <link rel="stylesheet" href="css/react-select.min.css" />
+    <link rel="stylesheet" href="css/react-datetime.css" />
+
+    <style>
+        body {
+            background: #EFF0F1;
+        }
+        #root {
+            height:100%;
+        }
+        #root [data-reactroot]{
+            height:100%;
+        }
+        #l_root {
+            position: fixed;
+            height: 100%;
+            width: 100%;
+            overflow: hidden;
+            top: 0;
+            left: 0;
+            background: #EFF0F1;
+            z-index: 100;
+        }
+        #l_cnt {
+            position: relative;
+            top: 45%;
+            width: 25%;
+            margin: auto;
+            min-width: 240px;
+            max-width: 320px;
+         }
+        #l_anim {
+            font-size: 24px;
+            text-align: center;
+            margin: 30px;
+            color: #D4D8E2;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="root">
+        <div id="l_root" role="progressbar">
+            <div id="l_cnt">
+                <div id="l_anim">
+                    <span class="fa-stack">
+                        <i class="fa fa-refresh fa-spin fa-stack-1x"></i>
+                        <i class="fa fa-circle-thin fa-stack-2x"></i>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        // Google Analytics
+        window.ga=function(){ga.q.push(arguments)};ga.q=[];ga.l=+new Date;
+        ga('create','<%= htmlWebpackPlugin.options.config.analytics.google.trackingId %>','auto');ga('send','pageview')
+    </script>
+    <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+
+</body>
+</html>

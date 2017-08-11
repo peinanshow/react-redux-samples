@@ -1,0 +1,172 @@
+@import '../../../variables.scss';
+
+
+.group {
+  margin-bottom: 15px;
+
+  &_error {
+    color: #bf0032;
+  }
+
+  &_hidden {
+    display: none;
+  }
+}
+
+.multiselect > * {
+  border-radius: 0;
+}
+
+
+.check {
+  position: relative;
+  display: block;
+  margin-bottom: .75rem;
+
+  label {
+    display: inline-block;
+    padding-left: 1.25rem;
+    margin-bottom: 0;
+    cursor: pointer;
+    touch-action: manipulation;
+  }
+
+  input {
+    margin-top: .25rem;
+    margin-left: -1.25rem;
+    padding: 0;
+    touch-action: manipulation;
+  }
+}
+
+
+.input {
+  background-color: #FFF;
+  border: 1px solid #CCC;
+  color: $text-color;
+  cursor: default;
+  display: table;
+  height: 36px;
+  outline: 0;
+  overflow: hidden;
+  width: 100%;
+  padding: 10px 12px;
+  font-size: 13px;
+  border-radius: 0;
+
+  &:hover {
+    box-shadow: 0 1px 0 rgba(0,0,0,.06);
+  }
+
+  :focus {
+    border-color: #66AFE9;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+  }
+}
+
+
+.datetime {
+  color: $text-color;
+  & > input {
+    @extend .input;
+  }
+}
+
+
+
+.inputGroup {
+  position: relative;
+  width: 100%;
+  display: table;
+  padding: 0 2px;
+  border-collapse: separate;
+
+  &_addon {
+    display: table-cell;
+    width: 1%;
+    white-space: nowrap;
+    vertical-align: middle;
+    padding: 0 12px;
+    margin-bottom: 0;
+    font-weight: 400;
+    line-height: 1.25;
+    color: #55595C;
+    text-align: center;
+    background-color: #ECEEEF;
+    border-collapse: separate;
+    border: 1px solid #CCC;
+    border-right-width: 0;
+  }
+
+  &_control {
+    @extend .input;
+    display: table-cell;
+    position: relative;
+    padding-top: 0;
+    padding-bottom: 0;
+    z-index: 2;
+    float: left;
+    width: 100%;
+    margin-bottom: 0;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+  }
+}
+
+
+.third {
+  width: 33.33%;
+  display: inline-block;
+  text-align: center;
+
+  &:first-child,
+  &:last-child {
+    .inputGroup {
+      padding: 0;
+    }
+  }
+}
+
+.label {
+  display: inline-block;
+  margin-bottom: 8px;
+  margin-left: 2px;
+  max-width: 100%;
+  color: #404448;
+  font-weight: 400;
+  font-size: 13px;
+
+  .error & {
+    color: $error-color;
+  }
+}
+
+
+.help {
+  margin: 8px 0 5px 2px;
+  font-size: 12px;
+}
+
+
+.button {
+  border-radius: 1px;
+  cursor: pointer;
+  display: inline-block;
+  margin-right: 8px;
+  padding: 6px 14px;
+  background: #29B5A1;
+  border-color: #23A592;
+  color: #fff;
+
+  &:hover { background: #23A592; }
+
+  &_disabled {
+    background: #E4E3E3;
+    border-color: #D2D2D2;
+    color: #888;
+    cursor: default;
+    opacity: 1;
+
+    &:hover { background: #E4E3E3; }
+  }
+}

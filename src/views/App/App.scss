@@ -1,0 +1,86 @@
+@import '../../variables.scss';
+
+/*
+ * Base styles
+ * ========================================================================== */
+
+* { box-sizing: border-box; }
+
+
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+
+
+body {
+  overflow: hidden;
+  margin: 0;
+  padding: 0;
+  font-family:      $font-family-base;
+  font-size:        $font-size-base;
+  line-height:      $line-height-base;
+  color:            $text-color;
+  background-color: $body-bg;
+  height: 100%;
+}
+
+
+/*
+ * Container
+ * ========================================================================== */
+
+.root {
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
+  overflow-x: auto;
+  overflow-y: hidden;
+  z-index: 0;
+  height:100%;
+}
+
+$color-50: #F1F2F5;
+$color-100: #F5F5F5;
+$color-300: #E0E0E0;
+$color-400: #D2D2D2;
+$color-500: #9E9E9E;
+::-webkit-scrollbar {
+  height: 10px;
+  width: 10px;
+}
+::-webkit-scrollbar:disabled {
+  display: none
+}
+::-webkit-scrollbar-thumb:vertical {
+  min-height: 50px
+}
+::-webkit-scrollbar-thumb:horizontal {
+  min-width: 50px
+}
+::-webkit-scrollbar-thumb {
+  border: 2px solid $color-50;
+  background-color: $color-400;
+}
+::-webkit-scrollbar-thumb:hover {
+  border: 2px solid $color-50;
+  background-color: $color-500;
+}
+::-webkit-scrollbar-thumb:active {
+  background: $color-500;
+}
+::-webkit-scrollbar-track {
+  background: $color-50;
+}
+::-webkit-scrollbar-corner {
+  background: $color-50;
+}
+::-webkit-scrollbar-button {
+  display: none;
+}

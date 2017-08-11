@@ -1,0 +1,29 @@
+@import '../../../variables.scss';
+
+.root {
+  padding-left: 2px;
+  padding-top: 3px;
+}
+.tool {
+  fill: $toolbarIcon-color;
+  stroke: $toolbarIcon-color;
+
+
+
+  &_disabled,
+  &_disabled:hover {
+    cursor: default;
+    stroke: #ccc;
+    fill: inherit;
+    opacity: .5;
+  }
+
+
+}
+
+.line{
+  stroke: $toolbarIcon-color;
+  &_disabled{
+    stroke: #ccc;
+  }
+}
